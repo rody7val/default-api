@@ -1,0 +1,11 @@
+var config = require('../config');
+var app = require('../app');
+var http = require('http');
+
+// Crear servidor http
+var server = http.createServer(app);
+
+server.listen(config.port, function (err){  
+	if (err) return console.log(err);
+	console.log('Servidor escuchando en http://localhost:'+config.port);
+}); 

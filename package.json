@@ -1,0 +1,35 @@
+{
+  "name": "default-api",
+  "version": "1.4.0",
+  "description": "API REST con controladores, modelos y rutas predeterminados.",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "engines": {
+    "node": "6.2.2",
+    "npm": "3.9.5"
+  },
+  "author": "Rodolfo Valguarnera <rod7val@gmail.com> (https://github.com/rody7val/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rody7val/default-api.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "crypto": "0.0.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.17.1",
+    "mongoose": "4.6.8",
+    "mongoose-deep-populate": "^3.0.0",
+    "mongoose-unique-validator": "^1.0.3",
+    "morgan": "^1.7.0",
+    "nodemailer": "^3.1.3",
+    "nodemailer-smtp-transport": "^2.7.2",
+    "serve-favicon": "^2.3.2"
+  }
+}
