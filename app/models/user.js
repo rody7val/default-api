@@ -31,6 +31,10 @@ var UserSchema = new Schema({
         type: Boolean,
         default: false
     },
+    superAdmin: {
+        type: Boolean,
+        default: false
+    },
     admin: {
         type: Boolean,
         default: false

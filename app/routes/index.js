@@ -1,5 +1,4 @@
 // Controladores
-var Notice = require('../controllers/notice_controller');
 var Auth = require('../controllers/auth_controller');
 var General = require('../controllers/general_controller');
 var Session = require('../controllers/session_controller');
@@ -13,7 +12,6 @@ module.exports = function (express) {
     api.get('/', General.doc);
 
     // Autoload de comandos 
-    api.param('noticeId', Notice.load);
     api.param('userId', User.load);
 
     // Auth
@@ -30,12 +28,6 @@ module.exports = function (express) {
     api.get('/users/:userId/active', User.active, User.all);
     api.get('/users/:userId/block', User.block, User.all);
     api.get('/users/:userId/delete', User.delete, User.all);
-
-    // Notices
-    api.get('/notices/:noticeId', Notice.one);
-    api.get('/notices', Notice.all);
-    api.post('/notices', Session.ensureAuthenticated, Notice.create);
-    api.get('/notices/:noticeId/delete', Notice.delete, Notice.all);
 
     // Restricción de rutas
     api.get('*', General.restrict);
